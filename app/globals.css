@@ -11,16 +11,22 @@ body {
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-bodybg text-bodyColor antialiased font-sans;
-  background:
-    radial-gradient(900px circle at 15% 0%, rgba(0, 103, 79, 0.16), transparent 42%),
-    radial-gradient(700px circle at 85% 12%, rgba(0, 103, 79, 0.12), transparent 45%),
-    linear-gradient(180deg, #f6f4ef 0%, #f8f6f2 45%, #f3efe7 100%);
+  background: linear-gradient(180deg, #f4f1eb 0%, #f8f6f1 50%, #f3f0e8 100%);
 }
 
 a {
   @apply underline-offset-4;
+}
+
+section[id],
+div[id] {
+  scroll-margin-top: 7.5rem;
 }
 
 @layer base {

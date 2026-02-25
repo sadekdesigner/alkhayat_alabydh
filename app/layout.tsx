@@ -26,7 +26,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(`https://${brand.domain}`),
   title: brand.name,
   description:
-    "Premium tailoring, precise alterations, and refined menswear essentials in Sharjah. Where Heritage Meets Ambition."
+    "Premium tailoring, precise alterations, and refined menswear essentials in Sharjah. Where Heritage Meets Ambition.",
+  icons: {
+    icon: [{ url: "/brand-icon.svg", type: "image/svg+xml" }],
+    shortcut: "/brand-icon.svg",
+    apple: "/favicon.ico"
+  }
 };
 
 export default function RootLayout({

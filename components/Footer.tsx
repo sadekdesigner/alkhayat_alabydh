@@ -1,78 +1,118 @@
 import Link from "next/link";
 import Container from "@/components/Container";
 import { brand } from "@/content/brand";
-import { copy } from "@/content/copy";
 import type { Locale } from "@/lib/i18n";
 
 export default function Footer({ locale }: { locale: Locale }) {
-  const t = copy[locale];
   const base = `/${locale}`;
 
   return (
-    <footer className="mt-16 border-t border-primary/15">
+    <footer className="mt-14 border-t border-[#8c7441]/50 bg-gradient-to-b from-[#151d28] to-[#101722] text-[#e1dacd]">
       <Container>
-        <div className="grid gap-5 py-10 md:grid-cols-3">
-          <div className="lux-card p-5">
-            <div className="text-xs uppercase tracking-[0.24em] text-primary/80">{brand.taglineEn}</div>
-            <div className="mt-2 font-display text-lg">{locale === "ar" ? brand.nameAr : brand.name}</div>
-            <p className="mt-3 text-sm text-bodyColor/75">{brand.address}</p>
-          </div>
-
-          <div className="lux-card p-5">
-            <div className="font-semibold">{locale === "ar" ? "تواصل" : "Contact"}</div>
-            <div className="mt-3 space-y-2 text-sm text-bodyColor/75">
-              <div>
-                <a className="no-underline hover:underline" href={`tel:${brand.phoneIntl}`}>
-                  {brand.phoneIntl}
-                </a>{" "}
-                <span className="text-bodyColor/45">({brand.phoneLocal})</span>
-              </div>
-              <div>
-                <a className="no-underline hover:underline" href={`mailto:${brand.email}`}>
-                  {brand.email}
+        <div className="grid gap-8 py-10 md:grid-cols-4">
+          <div>
+            <h3 className="text-lg tracking-[0.08em] text-[#c7a866]">{locale === "ar" ? "خدمة العملاء" : "Customer Care"}</h3>
+            <ul className="mt-4 space-y-2 text-sm text-[#d7d0c3]">
+              <li>
+                <a href={`tel:${brand.phoneIntl}`} className="no-underline hover:underline">
+                  {locale === "ar" ? "اتصل بنا" : "Contact Us"}
                 </a>
-              </div>
-              <div>
+              </li>
+              <li>
+                <a href={`mailto:${brand.email}`} className="no-underline hover:underline">
+                  {locale === "ar" ? "البريد الإلكتروني" : "Email"}
+                </a>
+              </li>
+              <li>
                 <a href={brand.mapUrl} target="_blank" rel="noreferrer" className="no-underline hover:underline">
-                  {locale === "ar" ? "فتح الموقع على الخريطة" : "Open in Maps"}
+                  {locale === "ar" ? "الموقع" : "Store Location"}
                 </a>
-              </div>
-            </div>
+              </li>
+              <li>{locale === "ar" ? "تقييمات العملاء" : "Client Reviews"}</li>
+            </ul>
           </div>
 
-          <div className="lux-card p-5">
-            <div className="font-semibold">{locale === "ar" ? "روابط" : "Links"}</div>
-            <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-bodyColor/75">
-              <Link href={base} className="no-underline hover:text-primary">
-                {t.nav.home}
-              </Link>
-              <Link href={`${base}/about`} className="no-underline hover:text-primary">
-                {t.nav.about}
-              </Link>
-              <Link href={`${base}/services`} className="no-underline hover:text-primary">
-                {t.nav.services}
-              </Link>
-              <Link href={`${base}/work`} className="no-underline hover:text-primary">
-                {t.nav.work}
-              </Link>
-              <Link href={`${base}/faq`} className="no-underline hover:text-primary">
-                {t.nav.faq}
-              </Link>
-              <Link href={`${base}/shipping-policy`} className="no-underline hover:text-primary">
-                {t.nav.shipping}
-              </Link>
-              <a href={brand.instagram} target="_blank" rel="noreferrer" className="no-underline hover:text-primary">
-                Instagram
+          <div>
+            <h3 className="text-lg tracking-[0.08em] text-[#c7a866]">{locale === "ar" ? "عنّا" : "About Us"}</h3>
+            <ul className="mt-4 space-y-2 text-sm text-[#d7d0c3]">
+              <li>
+                <Link href={`${base}#about`} className="no-underline hover:underline">
+                  {locale === "ar" ? "قصتنا" : "About"}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${base}/services`} className="no-underline hover:underline">
+                  {locale === "ar" ? "مجموعاتنا" : "Our Collections"}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${base}/work`} className="no-underline hover:underline">
+                  {locale === "ar" ? "رحلة الحياكة" : "Tailoring Journey"}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${base}/faq`} className="no-underline hover:underline">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg tracking-[0.08em] text-[#c7a866]">{locale === "ar" ? "المجموعات" : "Collections"}</h3>
+            <ul className="mt-4 space-y-2 text-sm text-[#d7d0c3]">
+              <li>
+                <Link href={`${base}/services`} className="no-underline hover:underline">
+                  {locale === "ar" ? "الإكسسوارات" : "Accessories"}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${base}/services`} className="no-underline hover:underline">
+                  {locale === "ar" ? "الشتوي" : "Winter"}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${base}/services`} className="no-underline hover:underline">
+                  {locale === "ar" ? "الكلاسيكي" : "Classic"}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${base}/contact#form`} className="no-underline hover:underline">
+                  {locale === "ar" ? "حجز موعد" : "Book Appointment"}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg tracking-[0.08em] text-[#c7a866]">{locale === "ar" ? "النشرة البريدية" : "Newsletter Signup"}</h3>
+            <p className="mt-3 text-sm text-[#d7d0c3]">
+              {locale === "ar"
+                ? "اشترك ليصلك كل جديد عن المجموعات والعروض."
+                : "Sign up for new collection releases and tailored offers."}
+            </p>
+            <div className="mt-4 rounded border border-[#8c7441]/70 bg-[#0f151f] px-3 py-2">
+              <span className="text-sm text-[#8f8a81]">{locale === "ar" ? "أدخل بريدك الإلكتروني" : "Enter your email"}</span>
+            </div>
+            <div className="mt-4 flex items-center gap-3 text-[#c7a866]">
+              <a href={brand.instagram} target="_blank" rel="noreferrer" className="no-underline">
+                ◉
               </a>
-              <a href={brand.facebook} target="_blank" rel="noreferrer" className="no-underline hover:text-primary">
-                Facebook
+              <a href={brand.facebook} target="_blank" rel="noreferrer" className="no-underline">
+                ✦
+              </a>
+              <a href={brand.linktree} target="_blank" rel="noreferrer" className="no-underline">
+                ⌁
               </a>
             </div>
           </div>
         </div>
 
-        <div className="pb-10 text-xs text-bodyColor/60">
-          © {new Date().getFullYear()} {brand.name}. {locale === "ar" ? "جميع الحقوق محفوظة." : "All rights reserved."}
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#8c7441]/40 py-4 text-xs text-[#d7d0c3]">
+          <p>
+            © {new Date().getFullYear()} {brand.name}. {locale === "ar" ? "جميع الحقوق محفوظة." : "All Rights Reserved."}
+          </p>
+          <p>{locale === "ar" ? "الشارقة، الإمارات" : "Sharjah, UAE."}</p>
         </div>
       </Container>
     </footer>
