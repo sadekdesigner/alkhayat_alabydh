@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-ink-950 text-white antialiased;
+  background:
+    radial-gradient(1200px circle at 8% 2%, rgba(201, 166, 107, 0.2), transparent 40%),
+    radial-gradient(900px circle at 90% 10%, rgba(42, 118, 132, 0.2), transparent 42%),
+    linear-gradient(160deg, #06070b 0%, #0a0d13 45%, #07090f 100%);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+a {
+  @apply underline-offset-4;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.locale-shell[dir="rtl"] {
+  font-family: var(--font-arabic), var(--font-sans), sans-serif;
+}
+
+.lux-card {
+  @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-luxe backdrop-blur-xl;
+}
+
+.lux-button {
+  @apply rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium no-underline transition hover:bg-white/20;
+}
+
+.lux-button-solid {
+  @apply rounded-xl border border-gold-300/30 bg-gradient-to-r from-gold-400 to-gold-500 px-4 py-2 text-sm font-semibold text-ink-950 no-underline transition hover:brightness-110;
+}
+
+.lux-divider {
+  @apply h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent;
+}
+
+.mesh-panel {
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01)),
+    radial-gradient(500px circle at 15% 20%, rgba(223, 197, 150, 0.1), transparent 50%);
+}
