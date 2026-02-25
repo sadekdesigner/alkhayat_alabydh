@@ -12,7 +12,7 @@ export default function LanguageSwitcher({ locale }: { locale: "en" | "ar" }) {
   return (
     <Link
       href={nextPath}
-      className="rounded-full border border-gold-300/40 bg-gold-400/10 px-3 py-1 text-xs font-medium text-gold-300 no-underline transition hover:bg-gold-400/20"
+      className="rounded-full border border-primary/35 bg-white px-3 py-1 text-xs font-semibold text-primary no-underline transition hover:bg-primary/10"
       aria-label="Switch language"
     >
       {other === "ar" ? "العربية" : "English"}

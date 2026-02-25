@@ -15,11 +15,11 @@ export default function MapCard({ locale }: { locale: Locale }) {
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="lux-card p-6">
             <SectionTitle title={t.mapTitle} desc={locale === "ar" ? "موقع واضح وتواصل سريع." : "Clear location, quick access, and direct contact."} />
-            <p className="text-white/75">{brand.address}</p>
+            <p className="text-bodyColor/75">{brand.address}</p>
 
-            <div className="mt-4 rounded-xl border border-white/10 bg-black/20 p-4">
-              <div className="font-medium text-white">{t.hoursTitle}</div>
-              <div className="mt-2 text-sm text-white/70">{locale === "ar" ? hours.ar : hours.en}</div>
+            <div className="mt-4 rounded-2xl border border-primary/20 bg-bodybg/70 p-4">
+              <div className="font-medium text-bodyColor">{t.hoursTitle}</div>
+              <div className="mt-2 text-sm text-bodyColor/70">{locale === "ar" ? hours.ar : hours.en}</div>
             </div>
 
             <div className="mt-5 flex flex-wrap gap-3">

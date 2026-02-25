@@ -28,7 +28,7 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
           {t.faq.map((item) => (
             <article key={item.q} className="lux-card p-6">
               <h3 className="font-semibold">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{item.a}</p>
+              <p className="mt-2 text-sm leading-relaxed text-bodyColor/70">{item.a}</p>
             </article>
           ))}
         </div>

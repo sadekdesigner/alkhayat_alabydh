@@ -4,22 +4,18 @@ export default {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./content/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ["var(--font-display)", "serif"],
+        sans: ["var(--font-sans)", "sans-serif"],
+        arabic: ["var(--font-arabic)", "sans-serif"]
+      },
       colors: {
-        ink: {
-          950: "#06070B",
-          900: "#0A0D13",
-          850: "#0F1420",
-          800: "#111827",
-          700: "#1F2937"
-        },
-        gold: {
-          500: "#BA935A",
-          400: "#C9A66B",
-          300: "#DFC596"
-        }
+        primary: "#00674F",
+        bodybg: "#F6F4EF",
+        bodyColor: "#1A1A1A"
       },
       boxShadow: {
-        luxe: "0 8px 42px rgba(0, 0, 0, 0.34)"
+        luxe: "0 20px 50px rgba(133, 107, 86, 0.15)"
       }
     }
   },

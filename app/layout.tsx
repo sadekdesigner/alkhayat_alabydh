@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-import { Cinzel, Manrope, Noto_Kufi_Arabic } from "next/font/google";
+import { Bodoni_Moda, IBM_Plex_Sans_Arabic, Manrope } from "next/font/google";
 import type { Metadata } from "next";
 import { brand } from "@/content/brand";
 
@@ -8,16 +8,18 @@ const manrope = Manrope({
   variable: "--font-sans"
 });
 
-const cinzel = Cinzel({
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700"]
+  weight: ["400", "500", "700", "800", "900"],
+  display: "swap"
 });
 
-const notoKufiArabic = Noto_Kufi_Arabic({
+const ibmArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
   variable: "--font-arabic",
-  weight: ["400", "500", "700"]
+  weight: ["200", "300", "400", "500", "700"],
+  display: "swap"
 });
 
 export const metadata: Metadata = {
@@ -33,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${cinzel.variable} ${notoKufiArabic.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${manrope.variable} ${bodoni.variable} ${ibmArabic.variable}`}>
+      <body className="bg-bodybg text-bodyColor font-sans">{children}</body>
     </html>
   );
 }

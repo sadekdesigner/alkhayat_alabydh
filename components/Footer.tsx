@@ -9,23 +9,23 @@ export default function Footer({ locale }: { locale: Locale }) {
   const base = `/${locale}`;
 
   return (
-    <footer className="mt-16 border-t border-white/10">
+    <footer className="mt-16 border-t border-primary/15">
       <Container>
         <div className="grid gap-5 py-10 md:grid-cols-3">
           <div className="lux-card p-5">
-            <div className="text-xs uppercase tracking-[0.24em] text-gold-300/80">{brand.taglineEn}</div>
+            <div className="text-xs uppercase tracking-[0.24em] text-primary/80">{brand.taglineEn}</div>
             <div className="mt-2 font-display text-lg">{locale === "ar" ? brand.nameAr : brand.name}</div>
-            <p className="mt-3 text-sm text-white/75">{brand.address}</p>
+            <p className="mt-3 text-sm text-bodyColor/75">{brand.address}</p>
           </div>
 
           <div className="lux-card p-5">
             <div className="font-semibold">{locale === "ar" ? "تواصل" : "Contact"}</div>
-            <div className="mt-3 space-y-2 text-sm text-white/75">
+            <div className="mt-3 space-y-2 text-sm text-bodyColor/75">
               <div>
                 <a className="no-underline hover:underline" href={`tel:${brand.phoneIntl}`}>
                   {brand.phoneIntl}
                 </a>{" "}
-                <span className="text-white/45">({brand.phoneLocal})</span>
+                <span className="text-bodyColor/45">({brand.phoneLocal})</span>
               </div>
               <div>
                 <a className="no-underline hover:underline" href={`mailto:${brand.email}`}>
@@ -42,36 +42,36 @@ export default function Footer({ locale }: { locale: Locale }) {
 
           <div className="lux-card p-5">
             <div className="font-semibold">{locale === "ar" ? "روابط" : "Links"}</div>
-            <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-white/75">
-              <Link href={base} className="no-underline hover:text-white">
+            <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-bodyColor/75">
+              <Link href={base} className="no-underline hover:text-primary">
                 {t.nav.home}
               </Link>
-              <Link href={`${base}/about`} className="no-underline hover:text-white">
+              <Link href={`${base}/about`} className="no-underline hover:text-primary">
                 {t.nav.about}
               </Link>
-              <Link href={`${base}/services`} className="no-underline hover:text-white">
+              <Link href={`${base}/services`} className="no-underline hover:text-primary">
                 {t.nav.services}
               </Link>
-              <Link href={`${base}/work`} className="no-underline hover:text-white">
+              <Link href={`${base}/work`} className="no-underline hover:text-primary">
                 {t.nav.work}
               </Link>
-              <Link href={`${base}/faq`} className="no-underline hover:text-white">
+              <Link href={`${base}/faq`} className="no-underline hover:text-primary">
                 {t.nav.faq}
               </Link>
-              <Link href={`${base}/shipping-policy`} className="no-underline hover:text-white">
+              <Link href={`${base}/shipping-policy`} className="no-underline hover:text-primary">
                 {t.nav.shipping}
               </Link>
-              <a href={brand.instagram} target="_blank" rel="noreferrer" className="no-underline hover:text-white">
+              <a href={brand.instagram} target="_blank" rel="noreferrer" className="no-underline hover:text-primary">
                 Instagram
               </a>
-              <a href={brand.facebook} target="_blank" rel="noreferrer" className="no-underline hover:text-white">
+              <a href={brand.facebook} target="_blank" rel="noreferrer" className="no-underline hover:text-primary">
                 Facebook
               </a>
             </div>
           </div>
         </div>
 
-        <div className="pb-10 text-xs text-white/50">
+        <div className="pb-10 text-xs text-bodyColor/60">
           © {new Date().getFullYear()} {brand.name}. {locale === "ar" ? "جميع الحقوق محفوظة." : "All rights reserved."}
         </div>
       </Container>

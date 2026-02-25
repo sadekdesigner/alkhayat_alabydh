@@ -11,7 +11,7 @@ export default function WhatsAppFloat({ locale }: { locale: Locale }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-5 end-5 z-50 rounded-full border border-emerald-200/40 bg-emerald-500/20 px-4 py-2 text-xs font-semibold text-emerald-100 no-underline shadow-luxe transition hover:bg-emerald-500/35"
+      className="fixed bottom-5 end-5 z-50 rounded-full border border-primary/35 bg-white px-4 py-2 text-xs font-semibold text-primary no-underline shadow-luxe transition hover:bg-primary/10"
       aria-label="WhatsApp"
     >
       {locale === "ar" ? "واتساب" : "WhatsApp"}

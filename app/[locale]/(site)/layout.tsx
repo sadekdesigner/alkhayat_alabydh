@@ -28,9 +28,9 @@ export default async function SiteLayout({
   const locale = raw;
 
   return (
-    <div className="locale-shell" lang={locale} dir={dir(locale)}>
+    <div className="locale-shell min-h-screen" lang={locale} dir={dir(locale)}>
       <Header locale={locale} />
-      <main>{children}</main>
+      <main className="pb-12">{children}</main>
       <Footer locale={locale} />
       <WhatsAppFloat locale={locale} />
       <CallFloat locale={locale} />

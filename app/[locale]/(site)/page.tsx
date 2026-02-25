@@ -40,7 +40,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="grid gap-4 lg:grid-cols-3">
             <article className="lux-card p-6">
               <h3 className="font-semibold">{locale === "ar" ? "خدمات مميزة" : "Featured Services"}</h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/75">
+              <ul className="mt-4 space-y-2 text-sm text-bodyColor/75">
                 {t.services.slice(0, 4).map((service) => (
                   <li key={service.title}>• {service.title}</li>
                 ))}
@@ -52,7 +52,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
             <article className="lux-card p-6">
               <h3 className="font-semibold">{locale === "ar" ? "المجموعة الشتوية" : "Winter Collection"}</h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/75">
+              <ul className="mt-4 space-y-2 text-sm text-bodyColor/75">
                 {catalog.winter.slice(0, 8).map((item) => (
                   <li key={item}>• {item}</li>
                 ))}
@@ -64,7 +64,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
             <article className="lux-card p-6">
               <h3 className="font-semibold">{locale === "ar" ? "الكلاسيكي والرسمي" : "Classic & Formal"}</h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/75">
+              <ul className="mt-4 space-y-2 text-sm text-bodyColor/75">
                 {catalog.classic.slice(0, 8).map((item) => (
                   <li key={item}>• {item}</li>
                 ))}

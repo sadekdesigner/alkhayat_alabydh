@@ -56,10 +56,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </a>
             </div>
 
-            <div className="mt-6 space-y-2 text-sm leading-relaxed text-white/75">
+            <div className="mt-6 space-y-2 text-sm leading-relaxed text-bodyColor/75">
               <p>{brand.address}</p>
               <p>
-                {brand.phoneIntl} <span className="text-white/40">({brand.phoneLocal})</span>
+                {brand.phoneIntl} <span className="text-bodyColor/50">({brand.phoneLocal})</span>
               </p>
               <p>{brand.email}</p>
             </div>

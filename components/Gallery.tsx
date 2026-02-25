@@ -33,14 +33,14 @@ export default function Gallery({
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {items.map((item, index) => (
             <article key={`${item.en}-${index}`} className="lux-card overflow-hidden">
-              <div className="aspect-[4/5] bg-gradient-to-br from-white/15 via-white/5 to-transparent p-3">
-                <div className="h-full w-full rounded-xl border border-dashed border-white/20 bg-black/15" />
+              <div className="aspect-[4/5] bg-gradient-to-br from-primary/30 via-primary/10 to-white p-3">
+                <div className="h-full w-full rounded-xl border border-dashed border-primary/35 bg-white/60" />
               </div>
-              <div className="border-t border-white/10 p-4 text-sm">
-                <div className="inline-flex rounded-full border border-gold-300/35 bg-gold-400/10 px-2 py-0.5 text-[11px] text-gold-200">
+              <div className="border-t border-primary/15 p-4 text-sm">
+                <div className="inline-flex rounded-full border border-primary/35 bg-primary/10 px-2 py-0.5 text-[11px] text-primary">
                   {locale === "ar" ? item.catAr : item.catEn}
                 </div>
-                <p className="mt-2 text-white/80">{locale === "ar" ? item.ar : item.en}</p>
+                <p className="mt-2 text-bodyColor/85">{locale === "ar" ? item.ar : item.en}</p>
               </div>
             </article>
           ))}

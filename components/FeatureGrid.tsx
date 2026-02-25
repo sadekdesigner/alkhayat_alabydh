@@ -21,7 +21,7 @@ export default function FeatureGrid({ locale }: { locale: Locale }) {
           {t.why.map((item) => (
             <article key={item.title} className="lux-card p-5">
               <h3 className="font-semibold">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{item.desc}</p>
+              <p className="mt-2 text-sm leading-relaxed text-bodyColor/70">{item.desc}</p>
             </article>
           ))}
         </div>

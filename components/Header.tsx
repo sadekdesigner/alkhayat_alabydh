@@ -19,11 +19,11 @@ export default function Header({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink-950/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-primary/15 bg-bodybg/95 backdrop-blur-xl">
       <Container>
         <div className="flex items-center justify-between gap-4 py-4">
           <Link href={base} className="no-underline">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gold-300/80">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-primary/80">
               {locale === "ar" ? brand.taglineAr : brand.taglineEn}
             </p>
             <p className="mt-1 max-w-[26rem] font-display text-sm font-semibold leading-snug sm:text-base">
@@ -33,14 +33,18 @@ export default function Header({ locale }: { locale: Locale }) {
 
           <nav className="hidden items-center gap-5 xl:flex">
             {links.map((link) => (
-              <Link key={link.href} href={link.href} className="text-sm text-white/75 no-underline transition hover:text-white">
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-bodyColor/75 no-underline transition hover:text-primary"
+              >
                 {link.label}
               </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-2">
-            <a href={`tel:${brand.phoneIntl}`} className="hidden text-sm text-white/75 no-underline md:block hover:text-white">
+            <a href={`tel:${brand.phoneIntl}`} className="hidden text-sm text-bodyColor/75 no-underline md:block hover:text-primary">
               {brand.phoneLocal}
             </a>
             <LanguageSwitcher locale={locale} />
@@ -50,7 +54,11 @@ export default function Header({ locale }: { locale: Locale }) {
         <div className="overflow-x-auto pb-4 xl:hidden">
           <nav className="flex min-w-max items-center gap-4">
             {links.map((link) => (
-              <Link key={link.href} href={link.href} className="text-sm text-white/75 no-underline transition hover:text-white">
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-bodyColor/75 no-underline transition hover:text-primary"
+              >
                 {link.label}
               </Link>
             ))}

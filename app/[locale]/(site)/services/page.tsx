@@ -30,7 +30,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           {t.services.map((service) => (
             <article key={service.title} className="lux-card p-6">
               <h3 className="font-semibold">{service.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{service.desc}</p>
+              <p className="mt-2 text-sm leading-relaxed text-bodyColor/70">{service.desc}</p>
               <a href={`/${locale}/contact#form`} className="mt-4 inline-block lux-button">
                 {locale === "ar" ? "اطلب الآن" : "Request Now"}
               </a>
@@ -41,7 +41,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         <div className="mt-12 grid gap-4 lg:grid-cols-2">
           <article className="lux-card p-6">
             <h3 className="font-semibold">{locale === "ar" ? "قائمة الشتوي" : "Winter Collection List"}</h3>
-            <ul className="mt-4 space-y-2 text-sm text-white/70">
+            <ul className="mt-4 space-y-2 text-sm text-bodyColor/70">
               {catalog.winter.map((item) => (
                 <li key={item}>• {item}</li>
               ))}
@@ -50,7 +50,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
           <article className="lux-card p-6">
             <h3 className="font-semibold">{locale === "ar" ? "قائمة الكلاسيكي/الرسمي" : "Classic & Formal List"}</h3>
-            <ul className="mt-4 space-y-2 text-sm text-white/70">
+            <ul className="mt-4 space-y-2 text-sm text-bodyColor/70">
               {catalog.classic.map((item) => (
                 <li key={item}>• {item}</li>
               ))}
@@ -61,7 +61,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         <div className="mt-4 grid gap-4 lg:grid-cols-3">
           <article className="lux-card p-6">
             <h3 className="font-semibold">{locale === "ar" ? "إكسسوارات تقليدية" : "Traditional Accessories"}</h3>
-            <ul className="mt-4 space-y-2 text-sm text-white/70">
+            <ul className="mt-4 space-y-2 text-sm text-bodyColor/70">
               {catalog.accessoriesTraditional.map((item) => (
                 <li key={item}>• {item}</li>
               ))}
@@ -70,7 +70,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
           <article className="lux-card p-6">
             <h3 className="font-semibold">{locale === "ar" ? "الملابس الداخلية" : "Innerwear"}</h3>
-            <ul className="mt-4 space-y-2 text-sm text-white/70">
+            <ul className="mt-4 space-y-2 text-sm text-bodyColor/70">
               {catalog.innerwear.map((item) => (
                 <li key={item}>• {item}</li>
               ))}
@@ -79,7 +79,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
           <article className="lux-card p-6">
             <h3 className="font-semibold">{locale === "ar" ? "إكسسوارات وأحذية" : "Other Accessories & Footwear"}</h3>
-            <ul className="mt-4 space-y-2 text-sm text-white/70">
+            <ul className="mt-4 space-y-2 text-sm text-bodyColor/70">
               {[...catalog.accessoriesOther, ...catalog.footwear].map((item) => (
                 <li key={item}>• {item}</li>
               ))}

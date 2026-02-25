@@ -31,7 +31,7 @@ export default async function ShippingPolicyPage({ params }: { params: Promise<{
           {shippingPolicyEn.sections.map((section) => (
             <article key={section.title} className="lux-card p-6">
               <h3 className="font-semibold">{section.title}</h3>
-              <ul className="mt-3 space-y-2 text-sm text-white/70">
+              <ul className="mt-3 space-y-2 text-sm text-bodyColor/70">
                 {section.bullets.map((bullet) => (
                   <li key={bullet}>• {bullet}</li>
                 ))}
@@ -39,7 +39,7 @@ export default async function ShippingPolicyPage({ params }: { params: Promise<{
               {"subTitle" in section && section.subTitle ? (
                 <>
                   <h4 className="mt-5 font-semibold">{section.subTitle}</h4>
-                  <ul className="mt-3 space-y-2 text-sm text-white/70">
+                  <ul className="mt-3 space-y-2 text-sm text-bodyColor/70">
                     {section.subBullets.map((bullet) => (
                       <li key={bullet}>• {bullet}</li>
                     ))}
@@ -48,7 +48,7 @@ export default async function ShippingPolicyPage({ params }: { params: Promise<{
               ) : null}
             </article>
           ))}
-          <p className="text-sm text-white/75">{shippingPolicyEn.contact}</p>
+          <p className="text-sm text-bodyColor/75">{shippingPolicyEn.contact}</p>
         </div>
       </div>
     </Container>

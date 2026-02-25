@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html,
@@ -12,44 +12,88 @@ body {
 }
 
 body {
-  @apply bg-ink-950 text-white antialiased;
+  @apply bg-bodybg text-bodyColor antialiased font-sans;
   background:
-    radial-gradient(1200px circle at 8% 2%, rgba(201, 166, 107, 0.2), transparent 40%),
-    radial-gradient(900px circle at 90% 10%, rgba(42, 118, 132, 0.2), transparent 42%),
-    linear-gradient(160deg, #06070b 0%, #0a0d13 45%, #07090f 100%);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    radial-gradient(900px circle at 15% 0%, rgba(0, 103, 79, 0.16), transparent 42%),
+    radial-gradient(700px circle at 85% 12%, rgba(0, 103, 79, 0.12), transparent 45%),
+    linear-gradient(180deg, #f6f4ef 0%, #f8f6f2 45%, #f3efe7 100%);
 }
 
 a {
   @apply underline-offset-4;
 }
 
-.font-display {
-  font-family: var(--font-display), serif;
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-bodyColor;
+  }
+
+  .locale-shell[dir="ltr"] h1,
+  .locale-shell[dir="ltr"] h2,
+  .locale-shell[dir="ltr"] h3,
+  .locale-shell[dir="ltr"] h4,
+  .locale-shell[dir="ltr"] h5,
+  .locale-shell[dir="ltr"] h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    font-weight: 400;
+  }
 }
 
 .locale-shell[dir="rtl"] {
   font-family: var(--font-arabic), var(--font-sans), sans-serif;
 }
 
+.locale-shell[dir="rtl"] h1,
+.locale-shell[dir="rtl"] h2,
+.locale-shell[dir="rtl"] h3,
+.locale-shell[dir="rtl"] h4,
+.locale-shell[dir="rtl"] h5,
+.locale-shell[dir="rtl"] h6 {
+  font-family: var(--font-arabic), var(--font-sans), sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.locale-shell[dir="rtl"] h1,
+.locale-shell[dir="rtl"] h2,
+.locale-shell[dir="rtl"] h3 {
+  font-weight: 300;
+}
+
+.locale-shell[dir="rtl"] h4,
+.locale-shell[dir="rtl"] h5,
+.locale-shell[dir="rtl"] h6 {
+  font-weight: 400;
+}
+
+.font-display {
+  @apply font-heading;
+}
+
 .lux-card {
-  @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-luxe backdrop-blur-xl;
+  @apply rounded-3xl border border-[#eadfce] bg-white/85 shadow-luxe backdrop-blur-sm;
 }
 
 .lux-button {
-  @apply rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium no-underline transition hover:bg-white/20;
+  @apply rounded-full border border-primary/35 bg-white px-5 py-2.5 text-sm font-semibold text-primary no-underline transition hover:-translate-y-0.5 hover:bg-primary/10;
 }
 
 .lux-button-solid {
-  @apply rounded-xl border border-gold-300/30 bg-gradient-to-r from-gold-400 to-gold-500 px-4 py-2 text-sm font-semibold text-ink-950 no-underline transition hover:brightness-110;
+  @apply rounded-full border border-primary bg-primary px-5 py-2.5 text-sm font-semibold text-white no-underline transition hover:-translate-y-0.5 hover:bg-[#00513E];
 }
 
 .lux-divider {
-  @apply h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent;
+  @apply h-px w-full bg-gradient-to-r from-transparent via-primary/40 to-transparent;
 }
 
 .mesh-panel {
   background:
-    linear-gradient(140deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01)),
-    radial-gradient(500px circle at 15% 20%, rgba(223, 197, 150, 0.1), transparent 50%);
+    radial-gradient(550px circle at 12% 10%, rgba(0, 103, 79, 0.2), transparent 45%),
+    linear-gradient(140deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
 }

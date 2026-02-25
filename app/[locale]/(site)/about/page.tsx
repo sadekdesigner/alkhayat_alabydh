@@ -27,7 +27,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         <div className="grid gap-4 md:grid-cols-3">
           <article className="lux-card p-6">
             <h3 className="font-semibold">{locale === "ar" ? "الدقة" : "Precision"}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/70">
+            <p className="mt-2 text-sm leading-relaxed text-bodyColor/70">
               {locale === "ar"
                 ? "قياسات مضبوطة وتنفيذ منظم يحترم التفاصيل."
                 : "Measured fittings and disciplined execution that respects every detail."}
@@ -35,7 +35,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </article>
           <article className="lux-card p-6">
             <h3 className="font-semibold">{locale === "ar" ? "الحرفية" : "Craftsmanship"}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/70">
+            <p className="mt-2 text-sm leading-relaxed text-bodyColor/70">
               {locale === "ar"
                 ? "تشطيب نظيف ومعايير جودة ثابتة لكل قطعة."
                 : "Refined finishing with consistent quality standards across every garment."}
@@ -43,7 +43,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </article>
           <article className="lux-card p-6">
             <h3 className="font-semibold">{locale === "ar" ? "الالتزام" : "Dependability"}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/70">
+            <p className="mt-2 text-sm leading-relaxed text-bodyColor/70">
               {locale === "ar" ? "مواعيد واضحة وتسليم بثقة." : "Clear timelines and dependable delivery you can plan around."}
             </p>
           </article>

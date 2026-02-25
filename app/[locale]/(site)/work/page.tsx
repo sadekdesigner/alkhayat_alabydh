@@ -35,7 +35,7 @@ export default async function WorkPage({ params }: { params: Promise<{ locale: s
         />
         <div className="mb-8 flex flex-wrap gap-2 text-xs">
           {t.workCategories.map((category) => (
-            <span key={category} className="rounded-full border border-gold-300/35 bg-gold-400/10 px-3 py-1 text-gold-200">
+            <span key={category} className="rounded-full border border-primary/35 bg-primary/10 px-3 py-1 text-primary">
               {category}
             </span>
           ))}
